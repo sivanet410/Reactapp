@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import ExpanseItem from "./components/ExpanseItem";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expanses = [
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <div>
-      <h2> Learn React</h2>
+      <NewExpense />
       <ExpanseItem
         date={expanses[0].date}
         title={expanses[0].title}
