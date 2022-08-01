@@ -19,7 +19,7 @@ function ExpanseItem(props) {
   const [title, setTitle] = useState(props.title);
 
   const chTitleHanndler = () => {
-    setTitle('updated !!');
+    setTitle("updated !!");
     console.log("clicked !!");
   };
 
@@ -32,18 +32,20 @@ function ExpanseItem(props) {
     //   </div>
     // </div>
 
-    <Card className="expense-item">
-      {/* <div>{month}</div>
+    <li>
+      <Card className="expense-item">
+        {/* <div>{month}</div>
       <div>{day}</div>
       <div>{year}</div> */}
-      <ExpanseDate date={props.date}></ExpanseDate>
-      <div className="expense-item__description">
-        <h2>{title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
-      </div>
+        <ExpanseDate date={props.date}></ExpanseDate>
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
 
-      <button onClick={chTitleHanndler}>Change Title</button>
-    </Card>
+        <button onClick={chTitleHanndler}>Change Title</button>
+      </Card>
+    </li>
   );
 }
 
